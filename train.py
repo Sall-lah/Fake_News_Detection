@@ -73,13 +73,13 @@ def train() -> Path:
 
     # Parameter distributions for RandomizedSearchCV
     param_distributions = {
-        "tfidf__max_features": [5000, 10000, 20000],
-        "tfidf__ngram_range": [(1, 1), (1, 2), (1, 3)],
-        "tfidf__min_df": [1, 2, 5],
-        "classifier__n_estimators": [50, 100, 200],
-        "classifier__learning_rate": [0.01, 0.05, 0.1, 0.2],
-        "classifier__num_leaves": [15, 31, 63],
-        "classifier__max_depth": [-1, 5, 10],
+        "tfidf__max_features": [20000, 40000],
+        "tfidf__ngram_range": [(1, 1)],
+        "tfidf__min_df": [1],
+        "classifier__n_estimators": [200, 300],
+        "classifier__learning_rate": [0.1],
+        "classifier__num_leaves": [15],
+        "classifier__max_depth": [-1],
     }
 
     # Run RandomizedSearchCV
@@ -90,7 +90,7 @@ def train() -> Path:
         cv=2,
         scoring="accuracy",
         random_state=42,
-        n_jobs=-1,
+        n_jobs=1,  # LightGBM multiprocessing crashes on Windows
         verbose=1,
     )
     search.fit(X_train, y_train)

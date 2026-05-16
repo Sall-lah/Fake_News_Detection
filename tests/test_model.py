@@ -1,4 +1,5 @@
 import pytest
+import warnings
 from model import get_model
 
 
@@ -9,6 +10,8 @@ class TestModel:
 
     def test_model_predict(self):
         model = get_model()
-        result = model.predict(["test article content"])
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", UserWarning)
+            result = model.predict(["test article content"])
         assert result is not None
         assert len(result) == 1
