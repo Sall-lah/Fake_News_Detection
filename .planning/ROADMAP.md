@@ -36,7 +36,9 @@
   1. `pip install -r requirements.txt` completes without errors, installing pandas 3.0.3 and lightgbm 4.6.0
   2. `import pandas` and `import lightgbm` succeed in the project's Python environment
   3. `requirements.txt` contains pinned versions (`==`) for all ML dependencies (pandas, lightgbm, scikit-learn, numpy, scipy, joblib)
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Update requirements.txt with pinned deps and verify installation
 
 ### Phase 4: Model Loader Refactoring
 **Goal**: model.py supports soft loading (returns None if missing) to enable conditional startup training
