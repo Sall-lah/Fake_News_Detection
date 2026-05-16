@@ -8,6 +8,20 @@ A local Flask API that serves predictions from a pre-trained `model.pkl` for fak
 
 Users can send a title + text and reliably receive a fake/true prediction from the model.
 
+## Current Milestone: v1.1 Model Training Pipeline
+
+**Goal:** Add a model training script that builds `model.pkl` from raw CSV datasets using pandas, and auto-runs on server startup (skipped if model already exists).
+
+**Target features:**
+- Dataset loader (pandas): combine `fake.csv` + `true.csv`, label them (0/1)
+- Feature engineering (pandas): merge title+text, drop raw columns, clean NAs
+- Apply `preprocess.py` on all 'string' column
+- Train/test split
+- LightGBM + TF-IDF pipeline with RandomizedSearchCV hyperparameter tuning
+- Save trained model as `model.pkl`
+- Auto-run training on server startup when `model.pkl` is missing
+- Skip training when `model.pkl` already exists
+
 ## Requirements
 
 ### Validated
