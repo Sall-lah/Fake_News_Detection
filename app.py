@@ -4,13 +4,30 @@ from pathlib import Path
 
 from flask import Flask, jsonify, render_template_string, request
 
-from model import get_model, load_model_or_exit
+from model import get_model, load_model
 from preprocess import clean_text
 
 app = Flask(__name__)
 
 MODEL_PATH = Path(__file__).parent / "model.pkl"
-load_model_or_exit(MODEL_PATH)
+
+# Try soft load first (warm start — model.pkl exists)
+model = load_model(MODEL_PATH)
+
+if model is None:
+    # Cold start — model.pkl missing, run training (D-02: block startup)
+    print("No pre-trained model found. Running training...")
+    from train import train  # Lazy import — pandas not imported on warm start (D-05)
+    model_path = train()
+    print(f"Training complete. Loading model from {model_path}")
+    model = load_model(MODEL_PATH)
+    if model is None:
+        print("Error: Training completed but model could not be loaded.")
+        raise SystemExit(1)
+    print("Model loaded successfully. API is ready.")
+else:
+    # Warm start — model.pkl already exists
+    print("Model loaded from existing model.pkl. API is ready.")
 
 
 @app.post("/predict")
