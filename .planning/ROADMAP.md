@@ -65,8 +65,8 @@ Plans:
   5. Rows that become empty after preprocessing are filtered out without crashing TF-IDF
 **Plans**: 2 plans
 Plans:
-- [ ] 05-01-PLAN.md — Data loading, combination, and feature engineering (DATA-01 to FEAT-05)
-- [ ] 05-02-PLAN.md — Training pipeline, hyperparameter tuning, metrics, model persistence (TRAIN-01 to SAVE-01)
+- [x] 05-01-PLAN.md — Data loading, combination, and feature engineering (DATA-01 to FEAT-05)
+- [x] 05-02-PLAN.md — Training pipeline, hyperparameter tuning, metrics, model persistence (TRAIN-01 to SAVE-01)
 
 ### Phase 6: Startup Hook Integration
 **Goal**: Flask app auto-trains on first startup when model.pkl is missing, skips on warm starts
@@ -97,7 +97,7 @@ Plans:
 | 2. API Documentation & Docker Deployment | 2/2 | Complete | 2026-05-16 |
 | 3. Dependencies & Foundation | 1/1 | Complete   | 2026-05-16 |
 | 4. Model Loader Refactoring | 1/1 | Complete   | 2026-05-16 |
-| 5. Training Script | 0/0 | Not started | - |
+| 5. Training Script | 2/2 | Complete   | 2026-05-16 |
 | 6. Startup Hook Integration | 0/0 | Not started | - |
 | 7. Docker & Deployment | 0/0 | Not started | - |
 

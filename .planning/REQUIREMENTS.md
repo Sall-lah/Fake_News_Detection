@@ -7,29 +7,29 @@
 
 ### Dataset Loading & Prep
 
-- [ ] **DATA-01**: Load `dataset/fake.csv` with pandas
-- [ ] **DATA-02**: Load `dataset/true.csv` with pandas
-- [ ] **DATA-03**: Combine both datasets into a single DataFrame
-- [ ] **DATA-04**: Create `label` column (0 for fake, 1 for true)
+- [x] **DATA-01**: Load `dataset/fake.csv` with pandas
+- [x] **DATA-02**: Load `dataset/true.csv` with pandas
+- [x] **DATA-03**: Combine both datasets into a single DataFrame
+- [x] **DATA-04**: Create `label` column (0 for fake, 1 for true)
 
 ### Feature Engineering
 
-- [ ] **FEAT-01**: Combine `title` and `text` into `string` column separated by space
-- [ ] **FEAT-02**: Drop `title`, `text`, `subject`, and `date` columns
-- [ ] **FEAT-03**: Apply `preprocess.py` cleaning on all `string` column values
-- [ ] **FEAT-04**: Remove rows with NA values
-- [ ] **FEAT-05**: Filter out empty strings after preprocessing
+- [x] **FEAT-01**: Combine `title` and `text` into `string` column separated by space
+- [x] **FEAT-02**: Drop `title`, `text`, `subject`, and `date` columns
+- [x] **FEAT-03**: Apply `preprocess.py` cleaning on all `string` column values
+- [x] **FEAT-04**: Remove rows with NA values
+- [x] **FEAT-05**: Filter out empty strings after preprocessing
 
 ### Model Training
 
-- [ ] **TRAIN-01**: Split dataset into train/test sets (stratified)
-- [ ] **TRAIN-02**: Build sklearn Pipeline with TF-IDF vectorizer and LightGBM classifier
-- [ ] **TRAIN-03**: Run RandomizedSearchCV for hyperparameter tuning
-- [ ] **TRAIN-04**: Print training metrics (accuracy, classification report, best params)
+- [x] **TRAIN-01**: Split dataset into train/test sets (stratified)
+- [x] **TRAIN-02**: Build sklearn Pipeline with TF-IDF vectorizer and LightGBM classifier
+- [x] **TRAIN-03**: Run RandomizedSearchCV for hyperparameter tuning
+- [x] **TRAIN-04**: Print training metrics (accuracy, classification report, best params)
 
 ### Model Persistence
 
-- [ ] **SAVE-01**: Save trained model as `model.pkl` using joblib
+- [x] **SAVE-01**: Save trained model as `model.pkl` using joblib
 
 ### Startup Integration
 
@@ -87,20 +87,20 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DEP-01 | Phase 3 | Complete |
 | DEP-02 | Phase 3 | Complete |
 | START-04 | Phase 4 | Complete |
-| DATA-01 | Phase 5 | Pending |
-| DATA-02 | Phase 5 | Pending |
-| DATA-03 | Phase 5 | Pending |
-| DATA-04 | Phase 5 | Pending |
-| FEAT-01 | Phase 5 | Pending |
-| FEAT-02 | Phase 5 | Pending |
-| FEAT-03 | Phase 5 | Pending |
-| FEAT-04 | Phase 5 | Pending |
-| FEAT-05 | Phase 5 | Pending |
-| TRAIN-01 | Phase 5 | Pending |
-| TRAIN-02 | Phase 5 | Pending |
-| TRAIN-03 | Phase 5 | Pending |
-| TRAIN-04 | Phase 5 | Pending |
-| SAVE-01 | Phase 5 | Pending |
+| DATA-01 | Phase 5 | Complete |
+| DATA-02 | Phase 5 | Complete |
+| DATA-03 | Phase 5 | Complete |
+| DATA-04 | Phase 5 | Complete |
+| FEAT-01 | Phase 5 | Complete |
+| FEAT-02 | Phase 5 | Complete |
+| FEAT-03 | Phase 5 | Complete |
+| FEAT-04 | Phase 5 | Complete |
+| FEAT-05 | Phase 5 | Complete |
+| TRAIN-01 | Phase 5 | Complete |
+| TRAIN-02 | Phase 5 | Complete |
+| TRAIN-03 | Phase 5 | Complete |
+| TRAIN-04 | Phase 5 | Complete |
+| SAVE-01 | Phase 5 | Complete |
 | START-01 | Phase 6 | Pending |
 | START-02 | Phase 6 | Pending |
 | START-03 | Phase 6 | Pending |
