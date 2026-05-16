@@ -36,7 +36,7 @@
 - [ ] **START-01**: Auto-run training script on server startup when `model.pkl` is missing
 - [ ] **START-02**: Skip training when `model.pkl` already exists
 - [ ] **START-03**: Use lazy import pattern to avoid pandas overhead on warm starts
-- [ ] **START-04**: Add soft `load_model()` function to `model.py` (returns None if missing)
+- [x] **START-04**: Add soft `load_model()` function to `model.py` (returns None if missing)
 
 ### Dependencies
 
@@ -86,7 +86,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | DEP-01 | Phase 3 | Complete |
 | DEP-02 | Phase 3 | Complete |
-| START-04 | Phase 4 | Pending |
+| START-04 | Phase 4 | Complete |
 | DATA-01 | Phase 5 | Pending |
 | DATA-02 | Phase 5 | Pending |
 | DATA-03 | Phase 5 | Pending |

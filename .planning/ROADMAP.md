@@ -51,7 +51,7 @@ Plans:
   4. Existing `/predict` endpoint continues to work unchanged with the existing model.pkl
 **Plans**: 1 plan
 Plans:
-- [ ] 04-01-PLAN.md — Add load_model() soft-load and refactor load_model_or_exit() to delegate
+- [x] 04-01-PLAN.md — Add load_model() soft-load and refactor load_model_or_exit() to delegate
 
 ### Phase 5: Training Script
 **Goal**: A standalone `train.py` builds a trained `model.pkl` from raw CSV datasets
@@ -93,7 +93,7 @@ Plans:
 | 1. Core Local Inference API | 3/3 | Complete | 2026-05-16 |
 | 2. API Documentation & Docker Deployment | 2/2 | Complete | 2026-05-16 |
 | 3. Dependencies & Foundation | 1/1 | Complete   | 2026-05-16 |
-| 4. Model Loader Refactoring | 0/0 | Not started | - |
+| 4. Model Loader Refactoring | 1/1 | Complete   | 2026-05-16 |
 | 5. Training Script | 0/0 | Not started | - |
 | 6. Startup Hook Integration | 0/0 | Not started | - |
 | 7. Docker & Deployment | 0/0 | Not started | - |
