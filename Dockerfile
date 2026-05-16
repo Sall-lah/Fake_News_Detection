@@ -6,9 +6,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code and model
-COPY model.pkl .
-COPY app.py model.py preprocess.py ./
+# Copy dataset (model is trained at runtime, not baked into image)
+COPY dataset/ ./dataset/
+
+# Copy application code (include train.py for startup training)
+COPY app.py model.py preprocess.py train.py ./
 
 EXPOSE 5000
 
