@@ -56,10 +56,11 @@ def load_and_prepare_data() -> pd.DataFrame:
     return df
 
 
-if __name__ == "__main__":
+def train() -> Path:
+    """Run full training pipeline and return the path to the saved model.pkl."""
     df = load_and_prepare_data()
 
-    # Train/test split (80/20 stratified, D-03)
+    # Train/test split (80/20 stratified)
     X_train, X_test, y_train, y_test = train_test_split(
         df["string"], df["label"], test_size=0.2, stratify=df["label"], random_state=42
     )
@@ -81,7 +82,7 @@ if __name__ == "__main__":
         "classifier__max_depth": [-1, 5, 10],
     }
 
-    # Run RandomizedSearchCV (D-05, D-06)
+    # Run RandomizedSearchCV
     search = RandomizedSearchCV(
         pipeline,
         param_distributions,
@@ -99,7 +100,7 @@ if __name__ == "__main__":
     y_pred = best_model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Print training metrics (D-04)
+    # Print training metrics
     print(f"\n{'=' * 50}")
     print(f"Training Complete")
     print(f"{'=' * 50}")
@@ -110,7 +111,7 @@ if __name__ == "__main__":
     for param, value in search.best_params_.items():
         print(f"  {param}: {value}")
 
-    # Save model (SAVE-01)
+    # Save model
     model_path = Path(__file__).parent / "model.pkl"
     joblib.dump(best_model, model_path)
     print(f"\nModel saved to {model_path}")
@@ -121,3 +122,10 @@ if __name__ == "__main__":
     print(f"Verification prediction: {test_prediction[0]} (expected: {y_test.iloc[0]})")
     assert test_prediction[0] == y_test.iloc[0], "Verification failed!"
     print("Model verification passed")
+
+    return model_path
+
+
+if __name__ == "__main__":
+    model_path = train()
+    print(f"Training complete. Model saved to {model_path}")
