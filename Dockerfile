@@ -12,5 +12,5 @@ COPY app.py model.py preprocess.py ./
 
 EXPOSE 5000
 
-# Use Waitress for production-grade local serving
-CMD ["waitress-serve", "--listen=0.0.0.0:5000", "app:app"]
+# Use Flask dev server for local development
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=5000"]
