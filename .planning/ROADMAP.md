@@ -49,7 +49,9 @@ Plans:
   2. `load_model()` returns the loaded pipeline when `model.pkl` exists
   3. `load_model_or_exit()` still exits with error when model is missing (backward compatible)
   4. Existing `/predict` endpoint continues to work unchanged with the existing model.pkl
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 04-01-PLAN.md — Add load_model() soft-load and refactor load_model_or_exit() to delegate
 
 ### Phase 5: Training Script
 **Goal**: A standalone `train.py` builds a trained `model.pkl` from raw CSV datasets
