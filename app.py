@@ -9,7 +9,7 @@ from preprocess import clean_text
 
 app = Flask(__name__)
 
-MODEL_PATH = Path(__file__).with_name("model.pkl")
+MODEL_PATH = Path(__file__).parent / "model.pkl"
 load_model_or_exit(MODEL_PATH)
 
 
