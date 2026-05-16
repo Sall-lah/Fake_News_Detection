@@ -1,12 +1,50 @@
+# Python
 __pycache__/
 *.pyc
 *.pyo
-.git/
-.gitignore
-.planning/
-*.md
-!requirements.txt
-.env
+*.pyd
+.Python
+
+# Virtual environments
 venv/
 .venv/
+env/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# GSD planning artifacts
+.planning/
+.claude/
+.opencode/
+.agents/
+
+# Documentation
+*.md
+!requirements.txt
+
+# Environment
+.env
+.env.*
+
+# Model artifacts (don't bake pre-trained models into image)
+*.pkl
+*.joblib
+model.pkl
 model.pkl.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
