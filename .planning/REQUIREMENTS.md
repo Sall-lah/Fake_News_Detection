@@ -24,7 +24,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Runtime
 
 - [x] **RUN-01**: Model is loaded once on startup and reused for all requests
-- [ ] **RUN-02**: `requirements.txt` defines runtime dependencies
+- [x] **RUN-02**: `requirements.txt` defines runtime dependencies
 
 ## v2 Requirements
 
@@ -65,7 +65,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRE-06 | Phase 1 | Complete |
 | PRE-07 | Phase 1 | Complete |
 | RUN-01 | Phase 1 | Complete |
-| RUN-02 | Phase 1 | Pending |
+| RUN-02 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 10 total
