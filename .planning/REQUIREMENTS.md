@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### API Endpoints
 
-- [ ] **API-01**: User can call `POST /predict` with JSON body containing `title` and `text`
+- [x] **API-01**: User can call `POST /predict` with JSON body containing `title` and `text`
 
 ### Preprocessing
 
@@ -19,7 +19,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **PRE-04**: English stopwords (sklearn ENGLISH_STOP_WORDS) are removed
 - [x] **PRE-05**: Duplicate words are removed
 - [x] **PRE-06**: Extra/empty whitespace is normalized
-- [ ] **PRE-07**: If cleaned input is empty, API returns error status
+- [x] **PRE-07**: If cleaned input is empty, API returns error status
 
 ### Runtime
 
@@ -56,14 +56,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| API-01 | Phase 1 | Pending |
+| API-01 | Phase 1 | Complete |
 | PRE-01 | Phase 1 | Complete |
 | PRE-02 | Phase 1 | Complete |
 | PRE-03 | Phase 1 | Complete |
 | PRE-04 | Phase 1 | Complete |
 | PRE-05 | Phase 1 | Complete |
 | PRE-06 | Phase 1 | Complete |
-| PRE-07 | Phase 1 | Pending |
+| PRE-07 | Phase 1 | Complete |
 | RUN-01 | Phase 1 | Complete |
 | RUN-02 | Phase 1 | Pending |
 
