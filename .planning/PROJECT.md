@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A local Flask API that serves predictions from a pre-trained `model.pkl` for fake-news classification. It exposes documentation-style responses on `/` and `/info`, and a `/predict` endpoint that accepts `title` and `text`, preprocesses them, and returns inference status plus a 0/1 prediction.
+A local Flask API that serves predictions from a pre-trained `model.pkl` for fake-news classification. It exposes self-documenting endpoints (`/`, `/info`), and a `/predict` endpoint that accepts `title` and `text`, preprocesses them, and returns a fake/true label. Containerized via Dockerfile with Flask dev server.
 
 ## Core Value
 
@@ -12,18 +12,18 @@ Users can send a title + text and reliably receive a fake/true prediction from t
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Preprocess input by combining `title + " " + text`, lowercasing, removing non-letters, removing stopwords, removing duplicate words, and normalizing whitespace — v1.0
+- ✓ Return error status when the processed string is empty — v1.0
+- ✓ Load `model.pkl` on startup and perform inference per request — v1.0
+- ✓ Return JSON with inference status and prediction value (0 = fake, 1 = true) — v1.0
+- ✓ Provide `/predict` endpoint that accepts `title` and `text` inputs — v1.0
+- ✓ Provide `/` and `/info` endpoints that describe API usage and examples — v1.0
+- ✓ Provide `requirements.txt` for dependencies — v1.0
+- ✓ Provide containerization (Dockerfile) that loads the model on startup — v1.0
 
 ### Active
 
-- [ ] Provide `/` and `/info` endpoints that describe API usage and examples.
-- [ ] Provide `/predict` endpoint that accepts `title` and `text` inputs.
-- [ ] Preprocess input by combining `title + " " + text`, lowercasing, removing non-letters, removing stopwords, removing duplicate words, and normalizing whitespace.
-- [ ] Return error status when the processed string is empty.
-- [ ] Load `model.pkl` on startup and perform inference per request.
-- [ ] Return JSON with inference status and prediction value (0 = fake, 1 = true).
-- [ ] Provide containerization (Dockerfile) that loads the model on startup.
-- [ ] Provide `requirements.txt` for dependencies.
+(None — planning next milestone)
 
 ### Out of Scope
 
@@ -33,21 +33,24 @@ Users can send a title + text and reliably receive a fake/true prediction from t
 
 ## Context
 
-The API is for a local fake-news detection workflow. The model file lives at the project root (`model.pkl`). Input is two fields (`title`, `text`), combined with a single space, then cleaned before inference. The service must be containerized and should not run tests since dependencies may not be installed locally.
+Shipped v1.0 with ~200 LOC Python (app.py, model.py, preprocess.py) + tests (26 pytest tests across 3 files). Tech stack: Flask 3.1.1, scikit-learn 1.7.1, LightGBM 4.6.0, Python 3.13. Model loaded at startup via joblib. Server runs on Flask dev server (Waitress removed). All 26 tests pass.
 
 ## Constraints
 
 - **Tech stack**: Flask (Python) — required backend framework.
 - **Model loading**: `model.pkl` must be loaded at startup — minimize per-request load time.
 - **Deployment**: Docker container required — must run locally.
-- **Testing**: Do not run tests — dependencies not installed yet.
+- **Testing**: pytest tests exist in `tests/` directory — 26 tests across 3 files.
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Use `/predict` as canonical endpoint (alias `/prediction`) | Simpler, standard naming | — Pending |
-| Store `model.pkl` at repo root | Matches current project layout | — Pending |
+| Use `/predict` as canonical endpoint | Simpler, standard naming | ✓ Good |
+| Store `model.pkl` at repo root | Matches current project layout | ✓ Good |
+| Remove Waitress, use Flask dev server | User preference, no extra dependencies | ✓ Good |
+| Split tests into separate files | Better organization: endpoints, preprocess, model | ✓ Good |
+| Add `lightgbm` dependency | Model requires LightGBM classifier | ✓ Good |
 
 ## Evolution
 
@@ -67,4 +70,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-15 after initialization*
+*Last updated: 2026-05-16 after v1.0 milestone*
