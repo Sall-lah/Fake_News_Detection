@@ -63,7 +63,10 @@ Plans:
   3. The saved `model.pkl` can be loaded and produces predictions when given title+text input
   4. Running `train.py` when `model.pkl` already exists overwrites it (idempotent retraining)
   5. Rows that become empty after preprocessing are filtered out without crashing TF-IDF
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 05-01-PLAN.md — Data loading, combination, and feature engineering (DATA-01 to FEAT-05)
+- [ ] 05-02-PLAN.md — Training pipeline, hyperparameter tuning, metrics, model persistence (TRAIN-01 to SAVE-01)
 
 ### Phase 6: Startup Hook Integration
 **Goal**: Flask app auto-trains on first startup when model.pkl is missing, skips on warm starts
