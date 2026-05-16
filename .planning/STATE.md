@@ -91,6 +91,12 @@ None yet.
 - Dataset characteristics unknown (size, class balance) — may affect RandomizedSearchCV config in Phase 5.
 - Existing model.pkl training provenance unknown — retraining may produce different results.
 
+## Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260517-193 | Fix LGBMClassifier feature name warning during prediction | 2026-05-16 | 5bcf121 | [260517-193-fix-lgbmclassifier-feature-name-warning-](./quick/260517-193-fix-lgbmclassifier-feature-name-warning-/) |
+
 ## Deferred Items
 
 Items acknowledged and carried forward from previous milestone close:
