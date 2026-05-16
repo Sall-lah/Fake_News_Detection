@@ -77,7 +77,18 @@ Plans:
   2. Starting the Flask app with `model.pkl` present skips training and loads the model immediately (fast startup)
   3. On warm start (model.pkl exists), pandas is not imported (lazy import pattern — no unnecessary overhead)
   4. The `/predict` endpoint works correctly after both cold start (with training) and warm start (without training)
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+
+Wave 1 *(parallel — no dependencies)*:
+- [ ] 06-01-PLAN.md — Extract train() function from train.py for importable training (START-01)
+
+Wave 2 *(blocked on Wave 1 completion)*:
+- [ ] 06-02-PLAN.md — Wire conditional startup flow in app.py (START-01, START-02, START-03)
+
+Cross-cutting constraints:
+- Training blocks startup until complete (D-02)
+- Lazy import of train module on cold start only (D-05, START-03)
 
 ### Phase 7: Docker & Deployment
 **Goal**: Docker image includes dataset and produces a working container with pre-trained model
