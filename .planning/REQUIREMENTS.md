@@ -40,8 +40,8 @@
 
 ### Dependencies
 
-- [ ] **DEP-01**: Add `pandas==3.0.3` to `requirements.txt`
-- [ ] **DEP-02**: Pin `lightgbm==4.6.0` in `requirements.txt`
+- [x] **DEP-01**: Add `pandas==3.0.3` to `requirements.txt`
+- [x] **DEP-02**: Pin `lightgbm==4.6.0` in `requirements.txt`
 
 ### Docker
 
@@ -84,8 +84,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DEP-01 | Phase 3 | Pending |
-| DEP-02 | Phase 3 | Pending |
+| DEP-01 | Phase 3 | Complete |
+| DEP-02 | Phase 3 | Complete |
 | START-04 | Phase 4 | Pending |
 | DATA-01 | Phase 5 | Pending |
 | DATA-02 | Phase 5 | Pending |

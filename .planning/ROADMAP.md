@@ -38,7 +38,7 @@
   3. `requirements.txt` contains pinned versions (`==`) for all ML dependencies (pandas, lightgbm, scikit-learn, numpy, scipy, joblib)
 **Plans**: 1 plan
 Plans:
-- [ ] 03-01-PLAN.md — Update requirements.txt with pinned deps and verify installation
+- [x] 03-01-PLAN.md — Update requirements.txt with pinned deps and verify installation
 
 ### Phase 4: Model Loader Refactoring
 **Goal**: model.py supports soft loading (returns None if missing) to enable conditional startup training
@@ -90,7 +90,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Core Local Inference API | 3/3 | Complete | 2026-05-16 |
 | 2. API Documentation & Docker Deployment | 2/2 | Complete | 2026-05-16 |
-| 3. Dependencies & Foundation | 0/0 | Not started | - |
+| 3. Dependencies & Foundation | 1/1 | Complete   | 2026-05-16 |
 | 4. Model Loader Refactoring | 0/0 | Not started | - |
 | 5. Training Script | 0/0 | Not started | - |
 | 6. Startup Hook Integration | 0/0 | Not started | - |
