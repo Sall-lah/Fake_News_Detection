@@ -71,3 +71,7 @@ None.
 None — no new security-relevant surface introduced.
 
 ## Self-Check: PASSED
+
+- SUMMARY.md: FOUND
+- Commit ed4b58e (task 1): FOUND
+- Commit cfc621a (final): FOUND
