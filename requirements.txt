@@ -1,6 +1,8 @@
+# Requires Python 3.13
 Flask==3.1.1
 scikit-learn==1.7.1
 numpy==2.4.4
 scipy==1.17.1
 joblib==1.5.3
-lightgbm
+pandas==3.0.3
+lightgbm==4.6.0  # Pinned to match model.pkl training provenance
