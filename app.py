@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import warnings
 
 from flask import Flask, jsonify, render_template_string, request
 
@@ -48,7 +49,9 @@ def predict():
         return jsonify({"status": "error", "message": "model not loaded"}), 503
 
     try:
-        prediction = model.predict([cleaned])[0]
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", category=UserWarning)
+            prediction = model.predict([cleaned])[0]
     except Exception:
         return jsonify({"status": "error", "message": "prediction failed"}), 500
 
