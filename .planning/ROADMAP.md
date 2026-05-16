@@ -98,7 +98,9 @@ Cross-cutting constraints:
   1. `docker build` succeeds and produces an image that includes the dataset files
   2. Running the container without a pre-existing model.pkl triggers training at startup, then serves predictions
   3. The `/predict` endpoint returns correct fake/true classifications from within the container
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 07-01-PLAN.md — Update Dockerfile (dataset COPY, no model.pkl) and .dockerignore
 
 ## Progress
 
