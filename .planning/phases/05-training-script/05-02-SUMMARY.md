@@ -65,3 +65,10 @@ None — plan executed exactly as written.
 LightGBM emits "X does not have valid feature names" warnings during CV folds. This is cosmetic — TF-IDF produces numpy arrays without feature names, which LightGBM accepts but warns about. No functional impact.
 
 ## Self-Check: PASSED
+
+- [x] train.py exists with full training pipeline
+- [x] model.pkl exists and loadable via model.py's load_model()
+- [x] Model has .predict() method and produces correct predictions
+- [x] Both SUMMARY.md files created
+- [x] All commits visible in git log
+- [x] All 14 requirements marked complete

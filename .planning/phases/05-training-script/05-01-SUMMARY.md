@@ -55,3 +55,9 @@ metrics:
 None — plan executed exactly as written.
 
 ## Self-Check: PASSED
+
+- [x] train.py exists at project root
+- [x] model.pkl exists and is loadable via model.py
+- [x] Both SUMMARY.md files created
+- [x] All 4 commits visible in git log
+- [x] All 14 requirements marked complete
