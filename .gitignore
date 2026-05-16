@@ -1,2 +1,4 @@
 ## Intentionally blank: planning artifacts are tracked.
+__pycache__/
+*.pyc
 
