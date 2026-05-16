@@ -18,13 +18,11 @@ def load_model(model_path: Path) -> object | None:
 
 
 def load_model_or_exit(model_path: Path) -> object:
-    global MODEL
-    try:
-        MODEL = joblib.load(model_path)
-    except Exception:
+    model = load_model(model_path)
+    if model is None:
         print("Failed to load model.")
         raise SystemExit(1)
-    return MODEL
+    return model
 
 
 def get_model() -> object | None:
