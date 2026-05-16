@@ -12,7 +12,8 @@ Deliver a single, reliable local inference API that exposes a `/predict` endpoin
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Core Local Inference API** - Deliver the full v1 predict workflow with preprocessing, startup model load, and declared runtime deps.
+- [x] **Phase 1: Core Local Inference API** - Deliver the full v1 predict workflow with preprocessing, startup model load, and declared runtime deps. (completed 2026-05-16)
+- [ ] **Phase 2: API Documentation & Docker Deployment** - Add self-documenting endpoints (`/`, `/info`) and a Dockerfile for containerized local use.
 
 ## Phase Details
 
@@ -25,7 +26,22 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. User inputs are combined, cleaned, and normalized as specified before inference.
   3. User receives an error response when cleaned input is empty.
   4. Local API starts with the model already loaded and dependencies declared for runtime use.
-**Plans**: TBD
+**Plans**: 3 plans
+
+### Phase 2: API Documentation & Docker Deployment
+**Goal**: Users can discover how to call the API via self-documenting endpoints (`/`, `/info`) and run the service in a Docker container with preloaded model.
+**Depends on**: Phase 1
+**Requirements**: API-02, API-03, RUN-03
+**Success Criteria** (what must be TRUE):
+  1. Visiting `/` returns a human-readable page listing available endpoints and usage examples.
+  2. Visiting `/info` returns structured JSON describing the API (endpoints, request/response formats, model info).
+  3. Response envelope consistently uses `status` + `label` fields across all endpoints.
+  4. `docker build` succeeds and `docker run` starts the API with the model preloaded.
+**Plans**: 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Add self-documenting endpoints (`/` HTML page, `/info` JSON metadata)
+- [ ] 02-02-PLAN.md — Create Dockerfile and .dockerignore for containerized deployment
 
 ## Progress
 
@@ -34,4 +50,4 @@ Phases execute in numeric order: 1 → 1.1 → 1.2 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Local Inference API | 3/3 | Complete | 2026-05-16 |
+| 1. Core Local Inference API | 3/3 | Complete   | 2026-05-16 |
