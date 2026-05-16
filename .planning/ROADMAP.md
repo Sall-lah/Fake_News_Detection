@@ -81,10 +81,10 @@ Plans:
 Plans:
 
 Wave 1 *(parallel — no dependencies)*:
-- [ ] 06-01-PLAN.md — Extract train() function from train.py for importable training (START-01)
+- [x] 06-01-PLAN.md — Extract train() function from train.py for importable training (START-01)
 
 Wave 2 *(blocked on Wave 1 completion)*:
-- [ ] 06-02-PLAN.md — Wire conditional startup flow in app.py (START-01, START-02, START-03)
+- [x] 06-02-PLAN.md — Wire conditional startup flow in app.py (START-01, START-02, START-03)
 
 Cross-cutting constraints:
 - Training blocks startup until complete (D-02)
@@ -109,7 +109,7 @@ Cross-cutting constraints:
 | 3. Dependencies & Foundation | 1/1 | Complete   | 2026-05-16 |
 | 4. Model Loader Refactoring | 1/1 | Complete   | 2026-05-16 |
 | 5. Training Script | 2/2 | Complete   | 2026-05-16 |
-| 6. Startup Hook Integration | 0/0 | Not started | - |
+| 6. Startup Hook Integration | 2/2 | Complete   | 2026-05-16 |
 | 7. Docker & Deployment | 0/0 | Not started | - |
 
 ## Coverage
