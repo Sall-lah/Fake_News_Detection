@@ -3,7 +3,7 @@
 ## Milestones
 
 - ✅ **v1.0 MVP** — Phases 1-2 (shipped 2026-05-16)
-- 🔄 **v1.1 Model Training Pipeline** — Phases 3-7 (planning)
+- ✅ **v1.1 Model Training Pipeline** — Phases 3-7 (complete)
 
 ## Phases
 
@@ -100,7 +100,7 @@ Cross-cutting constraints:
   3. The `/predict` endpoint returns correct fake/true classifications from within the container
 **Plans**: 1 plan
 Plans:
-- [ ] 07-01-PLAN.md — Update Dockerfile (dataset COPY, no model.pkl) and .dockerignore
+- [x] 07-01-PLAN.md — Update Dockerfile (dataset COPY, no model.pkl) and .dockerignore
 
 ## Progress
 
@@ -112,7 +112,7 @@ Plans:
 | 4. Model Loader Refactoring | 1/1 | Complete   | 2026-05-16 |
 | 5. Training Script | 2/2 | Complete   | 2026-05-16 |
 | 6. Startup Hook Integration | 2/2 | Complete   | 2026-05-16 |
-| 7. Docker & Deployment | 0/0 | Not started | - |
+| 7. Docker & Deployment | 1/1 | Complete   | 2026-05-16 |
 
 ## Coverage
 
@@ -138,7 +138,7 @@ Plans:
 | START-01 | Phase 6 | Pending |
 | START-02 | Phase 6 | Pending |
 | START-03 | Phase 6 | Pending |
-| DOCKER-01 | Phase 7 | Pending |
+| DOCKER-01 | Phase 7 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 21 total (20 original + 1 added for Docker)
