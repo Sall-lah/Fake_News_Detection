@@ -43,6 +43,10 @@
 - [ ] **DEP-01**: Add `pandas==3.0.3` to `requirements.txt`
 - [ ] **DEP-02**: Pin `lightgbm==4.6.0` in `requirements.txt`
 
+### Docker
+
+- [ ] **DOCKER-01**: Update Dockerfile to include dataset files and support conditional training at startup
+
 ## v2 Requirements
 
 Deferred to future release. Tracked but not in current roadmap.
@@ -80,32 +84,33 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 3 | Pending |
-| DATA-02 | Phase 3 | Pending |
-| DATA-03 | Phase 3 | Pending |
-| DATA-04 | Phase 3 | Pending |
-| FEAT-01 | Phase 3 | Pending |
-| FEAT-02 | Phase 3 | Pending |
-| FEAT-03 | Phase 3 | Pending |
-| FEAT-04 | Phase 3 | Pending |
-| FEAT-05 | Phase 3 | Pending |
-| TRAIN-01 | Phase 3 | Pending |
-| TRAIN-02 | Phase 3 | Pending |
-| TRAIN-03 | Phase 3 | Pending |
-| TRAIN-04 | Phase 3 | Pending |
-| SAVE-01 | Phase 3 | Pending |
-| START-01 | Phase 4 | Pending |
-| START-02 | Phase 4 | Pending |
-| START-03 | Phase 4 | Pending |
-| START-04 | Phase 2 | Pending |
-| DEP-01 | Phase 1 | Pending |
-| DEP-02 | Phase 1 | Pending |
+| DEP-01 | Phase 3 | Pending |
+| DEP-02 | Phase 3 | Pending |
+| START-04 | Phase 4 | Pending |
+| DATA-01 | Phase 5 | Pending |
+| DATA-02 | Phase 5 | Pending |
+| DATA-03 | Phase 5 | Pending |
+| DATA-04 | Phase 5 | Pending |
+| FEAT-01 | Phase 5 | Pending |
+| FEAT-02 | Phase 5 | Pending |
+| FEAT-03 | Phase 5 | Pending |
+| FEAT-04 | Phase 5 | Pending |
+| FEAT-05 | Phase 5 | Pending |
+| TRAIN-01 | Phase 5 | Pending |
+| TRAIN-02 | Phase 5 | Pending |
+| TRAIN-03 | Phase 5 | Pending |
+| TRAIN-04 | Phase 5 | Pending |
+| SAVE-01 | Phase 5 | Pending |
+| START-01 | Phase 6 | Pending |
+| START-02 | Phase 6 | Pending |
+| START-03 | Phase 6 | Pending |
+| DOCKER-01 | Phase 7 | Pending |
 
 **Coverage:**
-- v1.1 requirements: 20 total
-- Mapped to phases: 20
+- v1.1 requirements: 21 total (20 original + 1 DOCKER-01 added during roadmap)
+- Mapped to phases: 21
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-05-16*
-*Last updated: 2026-05-16 after initial definition*
+*Last updated: 2026-05-16 after v1.1 roadmap creation*

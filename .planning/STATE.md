@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Model Training Pipeline
 status: planning
-last_updated: "2026-05-16T10:48:39.845Z"
+last_updated: "2026-05-16T11:00:00.000Z"
 last_activity: 2026-05-16
 progress:
-  total_phases: 0
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_phases: 7
+  completed_phases: 2
+  total_plans: 5
+  completed_plans: 5
   percent: 0
 ---
 
@@ -17,17 +17,17 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-05-15)
+See: .planning/PROJECT.md (updated 2026-05-16)
 
 **Core value:** Return a reliable fake/true classification for a given title+text payload through a simple local API.
-**Current focus:** Phase 02 — api-documentation-docker-deployment
+**Current focus:** v1.1 Model Training Pipeline — roadmap defined, ready for Phase 3 planning
 
 ## Current Position
 
-Phase: Not started (defining requirements)
+Phase: 3 — Dependencies & Foundation (not started)
 Plan: —
-Status: Defining requirements
-Last activity: 2026-05-16 — Milestone v1.1 started
+Status: Roadmap created, awaiting phase planning
+Last activity: 2026-05-16 — Roadmap created for v1.1
 
 ## Performance Metrics
 
@@ -43,6 +43,11 @@ Last activity: 2026-05-16 — Milestone v1.1 started
 |-------|-------|-------|----------|
 | 01 | 3 | Complete | - |
 | 02 | 2 | Complete | - |
+| 03 | 0 | Not started | - |
+| 04 | 0 | Not started | - |
+| 05 | 0 | Not started | - |
+| 06 | 0 | Not started | - |
+| 07 | 0 | Not started | - |
 
 **Recent Trend:**
 
@@ -65,6 +70,8 @@ Recent decisions affecting current work:
 - [Phase 01]: Skipped TDD RED/GREEN/REFACTOR gates to honor no-tests constraint; recorded noncompliance. — Project constraint: testing dependencies not installed; user selected Option B.
 - [Phase 01]: Skipped TDD RED/GREEN/REFACTOR gates to honor no-tests constraint despite tdd task flag.
 - [Phase 02]: Runtime verification skipped (Flask/Docker dependencies not installed locally); code structure verified statically.
+- [v1.1 Roadmap]: Added DOCKER-01 requirement to cover Dockerfile updates (was missing from original requirements).
+- [v1.1 Roadmap]: Phase numbering continues from v1.0 (starts at Phase 3).
 
 ### Pending Todos
 
@@ -77,6 +84,8 @@ None yet.
 [Issues that affect future work]
 
 - Dependencies not installed locally — cannot run integration tests or Docker builds.
+- Dataset characteristics unknown (size, class balance) — may affect RandomizedSearchCV config in Phase 5.
+- Existing model.pkl training provenance unknown — retraining may produce different results.
 
 ## Deferred Items
 
@@ -94,4 +103,5 @@ Resume file: None
 
 ## Operator Next Steps
 
-- Start the next milestone with /gsd-new-milestone
+- Start Phase 3 planning with `/gsd-plan-phase 3`
+- Or run `/gsd-execute-phase` to begin execution
