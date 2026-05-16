@@ -1,5 +1,21 @@
 # Milestones
 
+## v1.1 Model Training Pipeline (Shipped: 2026-05-16)
+
+**Phases completed:** 5 phases, 7 plans, 0 tasks
+
+**Key accomplishments:**
+
+- One-liner:
+- One-liner:
+- One-liner:
+- One-liner:
+- One-liner:
+- One-liner:
+- One-liner:
+
+---
+
 ## v1.0 MVP (Shipped: 2026-05-16)
 
 **Phases completed:** 2 phases, 5 plans, 5 tasks
