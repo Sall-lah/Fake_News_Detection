@@ -73,13 +73,20 @@ def train() -> Path:
 
     # Parameter distributions for RandomizedSearchCV
     param_distributions = {
-        "tfidf__max_features": [20000, 40000],
-        "tfidf__ngram_range": [(1, 1)],
-        "tfidf__min_df": [1],
-        "classifier__n_estimators": [200, 300],
+        "tfidf__max_features": [30000],
+        "tfidf__ngram_range": [(1, 2)],
+        "tfidf__min_df": [2],
+        "tfidf__max_df": [0.9],
+        "classifier__subsample": [0.8],
+        "classifier__reg_lambda": [1],
+        "classifier__reg_alpha": [0],
+        "classifier__min_child_samples": [50],
+        "classifier__colsample_bytree": [0.8],
+        "classifier__n_estimators": [1000],
         "classifier__learning_rate": [0.1],
-        "classifier__num_leaves": [15],
-        "classifier__max_depth": [-1],
+        "classifier__num_leaves": [31],
+        "classifier__max_depth": [20],
+        "classifier__boosting_type": ["gbdt"],
     }
 
     # Run RandomizedSearchCV
